@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+        #box,#box1 {
+            width: 100px;
+            height: 200px;
+            border: 10px solid yellow;
+            word-wrap:break-word;
+            padding: 10px;
+            background: red;
+            box-sizing: content-box;
+            margin:20px auto;
+        }
+        #box1 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<p>box-sizing: content-box;  正常盒子模型,样式中给定的宽度和高度分别应用到元素的内容框中，在宽度和高度之外绘制元素的内边距和边框，例如, #box1 {width: 100px; border: 10px solid black;}在浏览器中呈现的宽度为120px的盒子</p>
+
+<div id="box">
+    box-sizing: content-box; 正常盒子模型，content+padding+border+margin
+</div>
+<hr />
+<p>box-sizing: border-box;   边框盒模型 (ie盒模型),样式中给定的宽度和高度包括内容，内边距和边框，但不包括外边距。 例如, #box1 {width: 100px; border: 10px solid black;}在浏览器中呈现的宽度为100px的盒子</p>
+<div id="box1">
+    box-sizing: border-box; 边框盒模型 ，width+margin
+</div>
+</body>
+</html>
